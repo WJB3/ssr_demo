@@ -1,13 +1,26 @@
 <template>
   <div class="container">
     <div class="wrapper">
-        <img :src="imageUrl" class="img" />
-         <br />
+      <img :src="imageUrl" class="img" />
+      <br />
+      <div style="display:flex;width:100%;">
+        <a-tag :style="styleObj">关键词</a-tag>
         <a-alert   type="info" :message="keywordvalue" style="width:90%;" :disabled="true"/>
+      </div>
       <br />
-      <a-alert  type="info" :message="pricevalue"   style="width:90%;" :disabled="true"/>
+      <div style="display:flex;width:100%;">
+        <a-tag :style="styleObj">价格</a-tag>
+        <a-alert  type="info" :message="pricevalue"   style="width:90%;" :disabled="true"/>
+      
+      </div>
+      
       <br />
-       <a-alert  type="info" :message="guigevalue"  style="width:90%;" :disabled="true"/>
+      <div style="display:flex;width:100%;">
+        <a-tag :style="styleObj">规格</a-tag>
+         
+      <a-alert  type="info" :message="guigevalue"  style="width:90%;" :disabled="true"/>
+      </div>
+       
       <br />
       <a-input-search
         placeholder="输入店铺名认证"
@@ -35,7 +48,13 @@ export default {
       guigevalue:"",
       imageUrl:imageUrl,
       shopvalue:"",
-      mailname:""
+      mailname:"",
+      styleObj:{
+        "flex-basis": "100px",
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center"
+      }
     }
   },
   mounted:function(){

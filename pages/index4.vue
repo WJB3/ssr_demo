@@ -11,7 +11,7 @@
       <br />
       <a-input placeholder="手机号" v-model="mobile" />
         <br />
-        <a-input-number  placeholder="实付金额" v-model="pay_money"    />
+        <a-input-number  placeholder="实付金额" v-model="pay_money"  style="width: 100%;"  />
         <br />
       <a-alert  :message="remark" type="info" style="width:90%;" :disabled="true"/>
       <br />

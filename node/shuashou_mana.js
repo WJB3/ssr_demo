@@ -12,14 +12,14 @@ app.use(bodyParser.urlencoded({
 
 //创建数据库连接对象
 
-var pool = mysql.createPool({
-    host: '129.211.190.222', //数据库地址
-    user: 'huaiges', //账号
-    password: 'qq111111', //密码
-    database: 'goods', //库名
-    port: '3306',
-    multipleStatements: true //允许执行多条语句
-});
+// var pool = mysql.createPool({
+//     host: '129.211.190.222', //数据库地址
+//     user: 'huaiges', //账号
+//     password: 'qq111111', //密码
+//     database: 'goods', //库名
+//     port: '3306',
+//     multipleStatements: true //允许执行多条语句
+// });
 
 var query=function (sql,options,callback) {
     pool.getConnection(function (err,conn) {
